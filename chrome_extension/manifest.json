@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+
+	"name": "NTUScore",
+	"description": "Good morning"
+,
+	"version": "1.0.0",
+
+	"permissions": [
+		"*://nol.ntu.edu.tw/*", 
+		"http://ntuscoreapi.herokuapp.com/", 
+		"http://kiwilab.csie.org:9192/",
+	    "http://huli.yade.cc/*"
+	],
+	"content_scripts": [
+    	{
+    		"matches": ["*://nol.ntu.edu.tw/*"],
+    		"js" : ["jquery-2.1.1.min.js", "ns.js"],
+    		"run_at": "document_end",
+    		"all_frames": true,
+    		"css" : ["ns.css"]
+    	}
+    ]
+}
