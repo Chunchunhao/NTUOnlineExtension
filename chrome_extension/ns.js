@@ -64,8 +64,8 @@ function on_click_tr(event, tr)
   event.data[0].new_row = new_row;
   new_column = $('<td>').appendTo(new_row).attr('colspan', '17');
                   
-  url = 'http://ntuscoreapi.herokuapp.com/score/' + thisYear  + '/' + thisSe + '/' + event.data[1].replace(/\S/g, '+') + '/' + event.data[2];
-  // console.log(url)
+  url = 'http://ntuscoreapi.herokuapp.com/score/' + thisYear  + '/' + thisSe + '/' + event.data[1].replace(/\s/g, '+') + '/' + event.data[2];
+  console.log(url)
 
   $.get(url, 
         function(data)
